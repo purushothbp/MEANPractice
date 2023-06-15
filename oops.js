@@ -21,7 +21,6 @@ class fan{
     estimation(){
         this.minCost=(this.wings*150 + 1000);
         return this.minCost;
-        console.log(this.minCost);
     }   
 }
 class tableFan extends fan{
@@ -31,6 +30,7 @@ class tableFan extends fan{
         console.log("Cost of TableFan : "+this.minCost);
     }
 }
+
 class ceilingFan extends fan{
     estimation(){
         this.minCost=(this.wings*150 +1000);
@@ -38,3 +38,8 @@ class ceilingFan extends fan{
         console.log("Cost of CeilingFan : " + this.minCost);
     };
 }
+var _ceilingFan=new ceilingFan(1005, 4, true, "", 2000, "fibre")
+console.log(_ceilingFan)
+
+var _fan = new tableFan();
+console.log(_fan.estimation());
